@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'DSDIGI';
+	src: url('./DSDIGI.eot');
+	src: local('DSDIGI'), url('./DSDIGI.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1091">Text with this font applied</p> */
+.fontsforweb_fontid_0 {
+	font-family: 'DSDIGI' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
+
+
+@font-face {
+	font-family: 'TKD';
+	src: url('./DSDIGI.eot');
+	src: local('TKD'), url('./TKD.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1091">Text with this font applied</p> */
+.fontsforweb_fontid_1 {
+	font-family: 'TKD' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
+
+
+
+@font-face {
+	font-family: 'DIGITAL';
+	src: url('./DSDIGI.eot');
+	src: local('DIGITAL'), url('./DIGITAL.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1091">Text with this font applied</p> */
+.fontsforweb_fontid_2 {
+	font-family: 'DIGITAL' !important;
+}
+
+@font-face {
+	font-family: 'fira';
+	src: url('./DSDIGI.eot');
+	src: local('DIGITAL'), url('./FiraCode.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1091">Text with this font applied</p> */
+.fontsforweb_fontid_3 {
+	font-family: 'DIGITAL' !important;
+}
+/* Font downloaded from FontsForWeb.com */
+@font-face {
+	font-family: 'pixelon';
+	src: url('./pixelon.ttf') format('truetype');
+}
+.fontsforweb_fontid_3 {
+	font-family: 'pixelon' !important;
+}
+@font-face {
+	font-family: 'nerd';
+	src: url('./JetBrainsMonoNerdFont-Bold.ttf') format('truetype');
+}
+.fontsforweb_fontid_3 {
+	font-family: 'nerd' !important;
+}

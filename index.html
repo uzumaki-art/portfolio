@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artistic Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body >
+
+ <div class="body" >
+  <div class="box">
+    <span class="sentence">Hello!<br>&nbsp;<br>&nbsp;</span>
+    <span class="sentence">I'm Nikhil & <br>&nbsp;</span><br>
+    <div class="typing-container">
+    <span id="sentence" class="sentence">&nbsp;</span>
+    <span class="input-cursor"></span>
+    </div>
+  </div>
+<div class="wallpaper" id="body"></div>
+
+ </div>
+<div class="about" id="about" >
+  <p class="abt">About</p>
+  <ul id="ab-ul">
+    <li>I'm just a normal student who like to do crazy stufs..</li>
+    <li>I'm also an artist who just copy paste faces so if you want a portrate of any kind of painting just let me know.</li>
+    <li>And offcourse is is not free of cost. so wanna time pass the keep away.</li>
+    <li>This web page is devloped by me and only me so you can contact me for web devloping.</li>
+    <li>I also know python stuff so i can also make backend. </li>
+  </ul>
+
+</div>
+
+<div class="contact" id="contact" >
+  <p class="abt">Contact Me</p>
+  <button>  Instagram</button>
+  <button>  github</button>
+  <button>  E-mail</button>
+</div>
+
+<div class="end" id="end" >
+
+  <img src="penguin.png" height="50%">
+  <p class="ed">Hey! Stop it's over now</p>
+</div>
+<br>&nbsp;
+
+<script>
+async function typeSentence(sentence, eleRef, delay = 100) {
+  const letters = sentence.split("");
+  let i = 0;
+  while(i < letters.length) {
+    await waitForMs(delay);
+    document.getElementById("sentence").innerHTML += letters[i];
+    i++
+  }
+  return;
+}
+
+
+function waitForMs(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+async function  deleteSentence() {
+  document.getElementById("sentence").innerHTML = "&nbsp;";
+}
+async function typewrite() {
+  await typeSentence(" an Artist", "#sentence");
+  await waitForMs(2000);
+  deleteSentence();
+  await typeSentence("a Web Devloaper", "#sentence");
+  await waitForMs(2000);
+  deleteSentence();
+  await typeSentence("a Student", "#sentence");
+  await waitForMs(2000);
+  deleteSentence();
+  typewrite()
+};
+typewrite()
+  </script>
+
+
+<script>
+  window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    var body = document.body;
+    var x = (200+((scroll)/body.offsetHeight)*200)
+    if ( body.offsetHeight/3 > scroll){
+      document.getElementById('about').style = 'margin-top : '+((1-(scroll*2))+25)+'px';
+      document.getElementById('end').style = 'margin-top : '+((body.offsetHeight*2 - scroll)+25)+'px';
+      document.getElementById('contact').style = 'margin-top : '+((body.offsetHeight - scroll)+25)+'px';
+
+    }
+    if ( body.offsetHeight/3 < scroll){
+      document.getElementById('about').style = 'top : 0px;position:fixed;';
+      document.getElementById('end').style = 'margin-top : '+((body.offsetHeight*2 - scroll)+25)+'px';
+      document.getElementById('contact').style = 'margin-top : '+((body.offsetHeight - scroll)+25)+'px';
+      if (((x/200)-1) > 0.5){
+    document.getElementById('contact').style = 'margin-top : '+((body.offsetHeight - scroll)+25)+'px;opacity: '+(((4-((x/200))-1)*2)-1)+';'}
+      
+    }
+
+    if (((body.offsetHeight*2 - scroll)) < body.offsetHeight){
+      if (scroll > body.offsetHeight){
+      document.getElementById('contact').style = 'top : 0px;position:fixed;';
+      document.getElementById('end').style = 'margin-top : '+(body.offsetHeight*2 - scroll)+'px';}
+    }
+     var x = (200+((scroll)/body.offsetHeight)*200)
+      document.getElementById('body').style = 'background-size: '+x+'%';
+      if (((x/200)-1) < 0.5){
+    document.getElementById('ab-ul').style = 'opacity: '+((x/200)-1)+';'}
+        if (((x/200)-1) > 0.5){
+    document.getElementById('about').style = 'top : 0px;position:fixed;opacity: '+((1-((x/200)-1))*2)+';'}
+          
+        if ((body.offsetHeight - scroll) < 1){      
+      document.getElementById('contact').style = 'top : 0px;position:fixed;'+'opacity: '+(((4-((x/200))-1)*2)-1)+';';}
+
+    }
+);
+</script>
+
+
+</body>
+</html>
